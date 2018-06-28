@@ -1,0 +1,13 @@
+Source: ros-bouncy-laser-geometry
+Section: misc
+Priority: extra
+Maintainer: William Woodall <william@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-bouncy-ament-cmake, ros-bouncy-ament-cmake-cppcheck, ros-bouncy-ament-cmake-cpplint, ros-bouncy-ament-cmake-gmock, ros-bouncy-ament-cmake-gtest, ros-bouncy-ament-cmake-lint-cmake, ros-bouncy-ament-cmake-uncrustify, ros-bouncy-rclcpp, ros-bouncy-sensor-msgs, ros-bouncy-tf2, ros-bouncy-ros-workspace
+Homepage: http://ros.org/wiki/laser_geometry
+Standards-Version: 3.9.2
+
+Package: ros-bouncy-laser-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-bouncy-ament-cmake, ros-bouncy-rclcpp, ros-bouncy-sensor-msgs, ros-bouncy-tf2, ros-bouncy-ros-workspace
+Description: This package contains a class for converting from a 2D laser scan as defined by sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud or sensor_msgs/PointCloud2.
+ In particular, it contains functionality to account for the skew resulting from moving robots or tilting laser scanners.
