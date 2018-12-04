@@ -1,0 +1,13 @@
+Source: ros-crystal-laser-geometry
+Section: misc
+Priority: extra
+Maintainer: William Woodall <william@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-crystal-ament-cmake, ros-crystal-ament-cmake-cppcheck, ros-crystal-ament-cmake-cpplint, ros-crystal-ament-cmake-gmock, ros-crystal-ament-cmake-gtest, ros-crystal-ament-cmake-lint-cmake, ros-crystal-ament-cmake-uncrustify, ros-crystal-rclcpp, ros-crystal-sensor-msgs, ros-crystal-tf2, ros-crystal-ros-workspace
+Homepage: http://ros.org/wiki/laser_geometry
+Standards-Version: 3.9.2
+
+Package: ros-crystal-laser-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-crystal-ament-cmake, ros-crystal-rclcpp, ros-crystal-sensor-msgs, ros-crystal-tf2, ros-crystal-ros-workspace
+Description: This package contains a class for converting from a 2D laser scan as defined by sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud or sensor_msgs/PointCloud2.
+ In particular, it contains functionality to account for the skew resulting from moving robots or tilting laser scanners.
