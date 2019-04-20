@@ -1,0 +1,13 @@
+Source: ros-dashing-laser-geometry
+Section: misc
+Priority: extra
+Maintainer: William Woodall <william@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-dashing-ament-cmake, ros-dashing-ament-cmake-cppcheck, ros-dashing-ament-cmake-cpplint, ros-dashing-ament-cmake-gmock, ros-dashing-ament-cmake-gtest, ros-dashing-ament-cmake-lint-cmake, ros-dashing-ament-cmake-uncrustify, ros-dashing-rclcpp, ros-dashing-sensor-msgs, ros-dashing-tf2
+Homepage: http://ros.org/wiki/laser_geometry
+Standards-Version: 3.9.2
+
+Package: ros-dashing-laser-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-dashing-ament-cmake, ros-dashing-rclcpp, ros-dashing-sensor-msgs, ros-dashing-tf2
+Description: This package contains a class for converting from a 2D laser scan as defined by sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud or sensor_msgs/PointCloud2.
+ In particular, it contains functionality to account for the skew resulting from moving robots or tilting laser scanners.
