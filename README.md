@@ -1,3 +1,26 @@
+## laser_geometry (eloquent) - 2.1.0-1
+
+The packages in the `laser_geometry` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release -r eloquent laser_geometry` on `Fri, 27 Sep 2019 13:33:50 -0000`
+
+The `laser_geometry` package was released.
+
+Version of package(s) in repository `laser_geometry`:
+
+- upstream repository: https://github.com/ros-perception/laser_geometry.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.13`
+- rosdep version: `0.16.1`
+- rosdistro version: `0.7.4`
+- vcstools version: `0.1.42`
+
+
 ## laser_geometry (dashing) - 2.0.0-0
 
 The packages in the `laser_geometry` repository were released into the `dashing` distro by running `/usr/local/bin/bloom-release -r dashing -t dashing laser_geometry` on `Sat, 20 Apr 2019 00:36:48 -0000`
