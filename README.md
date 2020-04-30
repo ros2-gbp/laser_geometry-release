@@ -1,3 +1,26 @@
+## laser_geometry (foxy) - 2.2.0-1
+
+The packages in the `laser_geometry` repository were released into the `foxy` distro by running `/usr/bin/bloom-release --rosdistro foxy --track foxy laser_geometry` on `Thu, 30 Apr 2020 20:40:28 -0000`
+
+The `laser_geometry` package was released.
+
+Version of package(s) in repository `laser_geometry`:
+
+- upstream repository: https://github.com/ros-perception/laser_geometry.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.2.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.3`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## laser_geometry (eloquent) - 2.1.1-1
 
 The packages in the `laser_geometry` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --rosdistro eloquent --track eloquent laser_geometry` on `Fri, 07 Feb 2020 00:03:42 -0000`
