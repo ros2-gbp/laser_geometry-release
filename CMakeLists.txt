@@ -35,8 +35,8 @@ ament_target_dependencies(laser_geometry
 target_compile_definitions(laser_geometry PRIVATE "LASER_GEOMETRY_BUILDING_LIBRARY")
 
 ament_export_include_directories(include)
-ament_export_interfaces(laser_geometry)
 ament_export_libraries(laser_geometry)
+ament_export_targets(laser_geometry)
 ament_export_dependencies(
   eigen3_cmake_module
   Eigen3
@@ -78,4 +78,4 @@ if(BUILD_TESTING)
   endif()
 endif()
 
-ament_package(CONFIG_EXTRAS laser_geometry-extras.cmake)
+ament_package()
