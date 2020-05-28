@@ -1,0 +1,148 @@
+ros-foxy-laser-geometry (2.2.0-2focal) focal; urgency=high
+
+  * use ament_export_targets()
+  * code style only: wrap after open parenthesis if not in one line (#52 <https://github.com/ros-perception/laser_geometry/issues/52>)
+  * use target_include_directories
+  * Drop CMake extras redundant with eigen3_cmake_module. (#50 <https://github.com/ros-perception/laser_geometry/issues/50>)
+  * Contributors: Dirk Thomas, Jonathan Binney, Karsten Knese, Michel Hidalgo
+
+ -- William Woodall <william@osrfoundation.org>  Thu, 30 Apr 2020 05:00:00 -0000
+
+ros-foxy-laser-geometry (2.1.0-2focal) focal; urgency=high
+
+  * Merge pull request #46 <https://github.com/ros-perception/laser_geometry/issues/46> from sloretz/eigen3_cmake_module
+  * Contributors: Jonathan Binney, Shane Loretz
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 27 Sep 2019 05:00:00 -0000
+
+ros-foxy-laser-geometry (2.0.0-2focal) focal; urgency=high
+
+  * Removed the ``angle`` dependency as no longer necessary.
+  * Updated to build statically but use position independent code.
+  * Updated to compile, and to remove PointCloud support, and remove boost.
+  * Added visibility headers modified from ``rclcpp``.
+  * Updated ``laser_geometry`` to build for ros2 (and on Windows 10).
+  * Improved use of numpy. (#14 <https://github.com/ros-perception/laser_geometry/issues/14>)
+  * Contributors: Alessandro Bottero, Andreas Greimel, Brian Fjeldstad, Eric Wieser, Jon Binney, Jonathan Binney, Martin Idel, Mikael Arguedas, Vincent Rabaud, William Woodall
+
+ -- William Woodall <william@osrfoundation.org>  Wed, 27 Jun 2018 05:00:00 -0000
+
+ros-foxy-laser-geometry (1.6.4-2focal) focal; urgency=high
+
+  * Fix segfault when laserscan ranges[] is empty
+  * Contributors: Timm Linder, Vincent Rabaud
+
+ -- William Woodall <william@osrfoundation.org>  Mon, 18 May 2015 05:00:00 -0000
+
+ros-foxy-laser-geometry (1.6.3-2focal) focal; urgency=high
+
+  * provide support for tf2
+  * Contributors: Vincent Rabaud
+
+ -- William Woodall <william@osrfoundation.org>  Sat, 07 Mar 2015 06:00:00 -0000
+
+ros-foxy-laser-geometry (1.6.2-2focal) focal; urgency=high
+
+  * adds python port (only simple projection)
+  * allows to have range_cutoff > range_max
+    NOTE this is required if we need to keep the range_max readings
+    in the point cloud.
+    An example application is an obstacle_layer in a costmap.
+  * Contributors: Vincent Rabaud, enriquefernandez
+
+ -- William Woodall <william@osrfoundation.org>  Sun, 08 Jun 2014 05:00:00 -0000
+
+ros-foxy-laser-geometry (1.6.1-2focal) focal; urgency=high
+
+  * Added dependency on cmake_modules
+  * Contributors: William Woodall
+
+ -- William Woodall <william@osrfoundation.org>  Sun, 23 Feb 2014 06:00:00 -0000
+
+ros-foxy-laser-geometry (1.6.0-2focal) focal; urgency=high
+
+  * Adding William Woodall as a co-maintainer
+  * Contributors: Vincent Rabaud, William Woodall
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 21 Feb 2014 06:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.15-2focal) focal; urgency=high
+
+  * Fix mistake in end_time calculation for scan transformation in #6
+
+ -- William Woodall <william@osrfoundation.org>  Mon, 02 Dec 2013 06:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.14-2focal) focal; urgency=high
+
+  * Treat max_range as invalid measurement
+  * Properly propagate range_cutoff
+  * check for CATKIN_ENABLE_TESTING
+
+ -- William Woodall <william@osrfoundation.org>  Mon, 04 Nov 2013 06:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.13-2focal) focal; urgency=high
+
+  * fixes #3 <https://github.com/ros-perception/laser_geometry/issues/3>
+
+ -- William Woodall <william@osrfoundation.org>  Sun, 06 Oct 2013 05:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.12-2focal) focal; urgency=high
+
+  * fix case of Eigen find_package name
+
+ -- William Woodall <william@osrfoundation.org>  Sat, 14 Sep 2013 05:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.11-2focal) focal; urgency=high
+
+  * added missing run deps
+
+ -- William Woodall <william@osrfoundation.org>  Mon, 01 Jul 2013 05:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.10-2focal) focal; urgency=high
+
+  * [bugfix] export boost and eigen via DEPENDS
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 28 Jun 2013 20:09:00 -0000
+
+ros-foxy-laser-geometry (1.5.9-2focal) focal; urgency=high
+
+  * [bugfix] export boost and eigen include dirs
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 28 Jun 2013 16:38:00 -0000
+
+ros-foxy-laser-geometry (1.5.8-2focal) focal; urgency=high
+
+  * Added buildtool_depend on catkin
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 14 Dec 2012 19:54:00 -0000
+
+ros-foxy-laser-geometry (1.5.7-2focal) focal; urgency=high
+
+  * CMake clean up
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 14 Dec 2012 19:48:00 -0000
+
+ros-foxy-laser-geometry (1.5.6-2focal) focal; urgency=high
+
+  * Removed vestigial manifest.xml
+
+ -- William Woodall <william@osrfoundation.org>  Mon, 10 Dec 2012 06:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.5-2focal) focal; urgency=high
+
+  * Added .count field (of 1) to every PointCloud2 field description.
+    This fixes the bug referred to here: http://dev.pointclouds.org/issues/821 which is useful because that fix in PCL
+    seems not to be released yet.
+    Also this way is more correct, as far as I can tell.
+  * Tidied up CMakeLists.txt based on Dirk's recommendations.
+
+ -- William Woodall <william@osrfoundation.org>  Thu, 15 Nov 2012 06:00:00 -0000
+
+ros-foxy-laser-geometry (1.5.4-2focal) focal; urgency=high
+
+  * added install rules to CMakeLists.txt needed for catkinization.
+  * catkinized
+
+ -- William Woodall <william@osrfoundation.org>  Wed, 10 Oct 2012 05:00:00 -0000
+
+
