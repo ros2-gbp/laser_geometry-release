@@ -1,0 +1,13 @@
+Source: ros-rolling-laser-geometry
+Section: misc
+Priority: optional
+Maintainer: Mabel Zhang <mabel@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-rolling-ament-cmake, ros-rolling-ament-cmake-cppcheck, ros-rolling-ament-cmake-cpplint, ros-rolling-ament-cmake-gmock, ros-rolling-ament-cmake-gtest, ros-rolling-ament-cmake-lint-cmake, ros-rolling-ament-cmake-uncrustify, ros-rolling-eigen3-cmake-module, ros-rolling-rclcpp, ros-rolling-sensor-msgs, ros-rolling-tf2, ros-rolling-ros-workspace
+Homepage: http://ros.org/wiki/laser_geometry
+Standards-Version: 3.9.2
+
+Package: ros-rolling-laser-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-rolling-ament-cmake, ros-rolling-eigen3-cmake-module, ros-rolling-rclcpp, ros-rolling-sensor-msgs, ros-rolling-tf2, ros-rolling-ros-workspace
+Description: This package contains a class for converting from a 2D laser scan as defined by sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud or sensor_msgs/PointCloud2.
+ In particular, it contains functionality to account for the skew resulting from moving robots or tilting laser scanners.
