@@ -1,1 +1,1 @@
-{"base": "2b68fec", "parent": "debian/rolling/laser_geometry", "previous": "d36b064", "trim": "", "trimbase": ""}
+{"base": "6bacc26", "parent": "debian/humble/laser_geometry", "previous": "0f9fa88", "trim": "", "trimbase": ""}
