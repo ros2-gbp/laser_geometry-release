@@ -222,5 +222,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros-perception/laser_geometry.git
-    version: 2.7.0
-    version_saved: :{auto}
+    version: :{auto}
