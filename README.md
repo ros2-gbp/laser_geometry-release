@@ -1,3 +1,26 @@
+## laser_geometry (rolling) - 2.8.0-1
+
+The packages in the `laser_geometry` repository were released into the `rolling` distro by running `/usr/bin/bloom-release laser_geometry --rosdistro rolling --non-interactive` on `Fri, 26 Apr 2024 11:36:10 -0000`
+
+The `laser_geometry` package was released.
+
+Version of package(s) in repository `laser_geometry`:
+
+- upstream repository: https://github.com/ros-perception/laser_geometry.git
+- release repository: https://github.com/ros2-gbp/laser_geometry-release.git
+- rosdistro version: `2.7.0-2`
+- old version: `2.7.0-2`
+- new version: `2.8.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## laser_geometry (rolling) - 2.7.0-1
 
 The packages in the `laser_geometry` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling laser_geometry` on `Tue, 26 Dec 2023 18:12:46 -0000`
