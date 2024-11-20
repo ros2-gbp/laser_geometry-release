@@ -2,6 +2,11 @@
 Changelog for package laser_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.9.0 (2024-11-20)
+------------------
+* Stop using python_cmake_module. (`#93 <https://github.com/ros-perception/laser_geometry/issues/93>`_)
+* Contributors: Chris Lalancette
+
 2.8.1 (2024-10-03)
 ------------------
 * Added common linters (`#96 <https://github.com/ros-perception/laser_geometry/issues/96>`_)
