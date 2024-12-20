@@ -2,6 +2,12 @@
 Changelog for package laser_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.10.0 (2024-12-20)
+-------------------
+* Deprecating tf2 C Headers (`#98 <https://github.com/ros-perception/laser_geometry/issues/98>`_)
+* Remove CODEOWNERS and mirror-rolling-to-main workflow (`#100 <https://github.com/ros-perception/laser_geometry/issues/100>`_)
+* Contributors: Alejandro Hernández Cordero, Lucas Wendland
+
 2.9.0 (2024-11-20)
 ------------------
 * Stop using python_cmake_module. (`#93 <https://github.com/ros-perception/laser_geometry/issues/93>`_)
