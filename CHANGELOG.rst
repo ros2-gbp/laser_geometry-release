@@ -2,11 +2,40 @@
 Changelog for package laser_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.7.1 (2025-06-23)
+2.11.2 (2025-10-03)
+-------------------
+* Use seconds in sensor_msgs::msg::LaserScan msg inside the test (`#107 <https://github.com/ros-perception/laser_geometry/issues/107>`_)
+* Use constructor of rclcpp::Time instead of conversion. (`#91 <https://github.com/ros-perception/laser_geometry/issues/91>`_)
+* fix cmake deprecation (`#105 <https://github.com/ros-perception/laser_geometry/issues/105>`_)
+* Contributors: AiVerisimilitude, Alejandro Hernández Cordero, mosfet80
+
+2.11.1 (2025-06-23)
+-------------------
+* Remove hard-coded eigen3 header path for linux hosts (`#95 <https://github.com/ros-perception/laser_geometry/issues/95>`_)
+  Co-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>
+* Contributors: Lukas Schäper
+
+2.11.0 (2025-04-28)
+-------------------
+
+2.10.0 (2024-12-20)
+-------------------
+* Deprecating tf2 C Headers (`#98 <https://github.com/ros-perception/laser_geometry/issues/98>`_)
+* Remove CODEOWNERS and mirror-rolling-to-main workflow (`#100 <https://github.com/ros-perception/laser_geometry/issues/100>`_)
+* Contributors: Alejandro Hernández Cordero, Lucas Wendland
+
+2.9.0 (2024-11-20)
 ------------------
-* Remove hard-coded eigen3 header path for linux hosts (`#95 <https://github.com/ros-perception/laser_geometry/issues/95>`_) (`#103 <https://github.com/ros-perception/laser_geometry/issues/103>`_)
-* Remove CODEOWNERS and mirror-rolling-to-main workflow (`#100 <https://github.com/ros-perception/laser_geometry/issues/100>`_) (`#101 <https://github.com/ros-perception/laser_geometry/issues/101>`_)
-* Contributors: mergify[bot]
+* Stop using python_cmake_module. (`#93 <https://github.com/ros-perception/laser_geometry/issues/93>`_)
+* Contributors: Chris Lalancette
+
+2.8.1 (2024-10-03)
+------------------
+* Added common linters (`#96 <https://github.com/ros-perception/laser_geometry/issues/96>`_)
+* Contributors: Alejandro Hernández Cordero
+
+2.8.0 (2024-04-26)
+------------------
 
 2.7.0 (2023-12-26)
 ------------------
