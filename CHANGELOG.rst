@@ -2,36 +2,17 @@
 Changelog for package laser_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.10.2 (2025-10-07)
--------------------
-* Use constructor of rclcpp::Time instead of conversion. (`#91 <https://github.com/ros-perception/laser_geometry/issues/91>`_) (`#112 <https://github.com/ros-perception/laser_geometry/issues/112>`_)
-* Use seconds in sensor_msgs::msg::LaserScan msg inside the test (`#107 <https://github.com/ros-perception/laser_geometry/issues/107>`_) (`#109 <https://github.com/ros-perception/laser_geometry/issues/109>`_)
-* fix cmake deprecation (`#105 <https://github.com/ros-perception/laser_geometry/issues/105>`_) (`#108 <https://github.com/ros-perception/laser_geometry/issues/108>`_)
+2.7.2 (2025-10-07)
+------------------
+* Use constructor of rclcpp::Time instead of conversion. (`#91 <https://github.com/ros-perception/laser_geometry/issues/91>`_) (`#113 <https://github.com/ros-perception/laser_geometry/issues/113>`_)
+* Use seconds in sensor_msgs::msg::LaserScan msg inside the test (`#107 <https://github.com/ros-perception/laser_geometry/issues/107>`_) (`#110 <https://github.com/ros-perception/laser_geometry/issues/110>`_)
 * Contributors: mergify[bot]
 
-2.10.1 (2025-06-23)
--------------------
-* Remove hard-coded eigen3 header path for linux hosts (`#95 <https://github.com/ros-perception/laser_geometry/issues/95>`_) (`#102 <https://github.com/ros-perception/laser_geometry/issues/102>`_)
+2.7.1 (2025-06-23)
+------------------
+* Remove hard-coded eigen3 header path for linux hosts (`#95 <https://github.com/ros-perception/laser_geometry/issues/95>`_) (`#103 <https://github.com/ros-perception/laser_geometry/issues/103>`_)
+* Remove CODEOWNERS and mirror-rolling-to-main workflow (`#100 <https://github.com/ros-perception/laser_geometry/issues/100>`_) (`#101 <https://github.com/ros-perception/laser_geometry/issues/101>`_)
 * Contributors: mergify[bot]
-
-2.10.0 (2024-12-20)
--------------------
-* Deprecating tf2 C Headers (`#98 <https://github.com/ros-perception/laser_geometry/issues/98>`_)
-* Remove CODEOWNERS and mirror-rolling-to-main workflow (`#100 <https://github.com/ros-perception/laser_geometry/issues/100>`_)
-* Contributors: Alejandro Hernández Cordero, Lucas Wendland
-
-2.9.0 (2024-11-20)
-------------------
-* Stop using python_cmake_module. (`#93 <https://github.com/ros-perception/laser_geometry/issues/93>`_)
-* Contributors: Chris Lalancette
-
-2.8.1 (2024-10-03)
-------------------
-* Added common linters (`#96 <https://github.com/ros-perception/laser_geometry/issues/96>`_)
-* Contributors: Alejandro Hernández Cordero
-
-2.8.0 (2024-04-26)
-------------------
 
 2.7.0 (2023-12-26)
 ------------------
