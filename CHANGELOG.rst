@@ -2,32 +2,11 @@
 Changelog for package laser_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.7.2 (2025-10-07)
+2.4.1 (2025-10-07)
 ------------------
-* Use constructor of rclcpp::Time instead of conversion. (`#91 <https://github.com/ros-perception/laser_geometry/issues/91>`_) (`#113 <https://github.com/ros-perception/laser_geometry/issues/113>`_)
-* Use seconds in sensor_msgs::msg::LaserScan msg inside the test (`#107 <https://github.com/ros-perception/laser_geometry/issues/107>`_) (`#110 <https://github.com/ros-perception/laser_geometry/issues/110>`_)
+* Use constructor of rclcpp::Time instead of conversion operator (backport `#91 <https://github.com/ros-perception/laser_geometry/issues/91>`_) (`#114 <https://github.com/ros-perception/laser_geometry/issues/114>`_)
+* Use seconds in sensor_msgs::msg::LaserScan msg inside the test (`#107 <https://github.com/ros-perception/laser_geometry/issues/107>`_) (`#111 <https://github.com/ros-perception/laser_geometry/issues/111>`_)
 * Contributors: mergify[bot]
-
-2.7.1 (2025-06-23)
-------------------
-* Remove hard-coded eigen3 header path for linux hosts (`#95 <https://github.com/ros-perception/laser_geometry/issues/95>`_) (`#103 <https://github.com/ros-perception/laser_geometry/issues/103>`_)
-* Remove CODEOWNERS and mirror-rolling-to-main workflow (`#100 <https://github.com/ros-perception/laser_geometry/issues/100>`_) (`#101 <https://github.com/ros-perception/laser_geometry/issues/101>`_)
-* Contributors: mergify[bot]
-
-2.7.0 (2023-12-26)
-------------------
-* Switch to target_link_libraries. (`#92 <https://github.com/ros-perception/laser_geometry/issues/92>`_)
-* Contributors: Chris Lalancette
-
-2.6.0 (2023-04-28)
-------------------
-
-2.5.0 (2023-02-14)
-------------------
-* Update laser_geometry to C++17. (`#90 <https://github.com/ros-perception/laser_geometry/issues/90>`_)
-* Update Maintainers (`#88 <https://github.com/ros-perception/laser_geometry/issues/88>`_)
-* Mirror rolling to ros2
-* Contributors: Audrow Nash, Chris Lalancette
 
 2.4.0 (2022-03-01)
 ------------------
