@@ -1,47 +1,45 @@
-/*
- * Copyright (c) 2008, Willow Garage, Inc.
- * Copyright (c) 2018, Bosch Software Innovations GmbH.
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- *     * Redistributions of source code must retain the above copyright
- *       notice, this list of conditions and the following disclaimer.
- *     * Redistributions in binary form must reproduce the above copyright
- *       notice, this list of conditions and the following disclaimer in the
- *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of the Willow Garage, Inc. nor the names of its
- *       contributors may be used to endorse or promote products derived from
- *       this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
- * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
- * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
- * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- * POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (c) 2008, Willow Garage, Inc.
+// Copyright (c) 2018, Bosch Software Innovations GmbH.
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright
+//      notice, this list of conditions and the following disclaimer.
+//
+//    * Redistributions in binary form must reproduce the above copyright
+//      notice, this list of conditions and the following disclaimer in the
+//      documentation and/or other materials provided with the distribution.
+//
+//    * Neither the name of the copyright holder nor the names of its
+//      contributors may be used to endorse or promote products derived from
+//      this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
 
 #include "laser_geometry/laser_geometry.hpp"
+
+#include <Eigen/Core>
 
 #include <algorithm>
 #include <string>
 
 #include "rclcpp/time.hpp"
+#include "sensor_msgs/msg/laser_scan.hpp"
+#include "sensor_msgs/msg/point_cloud2.hpp"
 
-#define TIME rclcpp::Time
-
-#define POINT_FIELD sensor_msgs::msg::PointField
-
-typedef double tfScalar;
-
-#include "tf2/LinearMath/Transform.h"
+#include "tf2/LinearMath/Transform.hpp"
 
 namespace laser_geometry
 {
@@ -87,15 +85,15 @@ void LaserProjection::projectLaser_(
   cloud_out.fields.resize(3);
   cloud_out.fields[0].name = "x";
   cloud_out.fields[0].offset = 0;
-  cloud_out.fields[0].datatype = POINT_FIELD::FLOAT32;
+  cloud_out.fields[0].datatype = sensor_msgs::msg::PointField::FLOAT32;
   cloud_out.fields[0].count = 1;
   cloud_out.fields[1].name = "y";
   cloud_out.fields[1].offset = 4;
-  cloud_out.fields[1].datatype = POINT_FIELD::FLOAT32;
+  cloud_out.fields[1].datatype = sensor_msgs::msg::PointField::FLOAT32;
   cloud_out.fields[1].count = 1;
   cloud_out.fields[2].name = "z";
   cloud_out.fields[2].offset = 8;
-  cloud_out.fields[2].datatype = POINT_FIELD::FLOAT32;
+  cloud_out.fields[2].datatype = sensor_msgs::msg::PointField::FLOAT32;
   cloud_out.fields[2].count = 1;
 
   // Define 4 indices in the channel array for each possible value type
@@ -108,7 +106,7 @@ void LaserProjection::projectLaser_(
     size_t field_size = cloud_out.fields.size();
     cloud_out.fields.resize(field_size + 1);
     cloud_out.fields[field_size].name = "intensity";
-    cloud_out.fields[field_size].datatype = POINT_FIELD::FLOAT32;
+    cloud_out.fields[field_size].datatype = sensor_msgs::msg::PointField::FLOAT32;
     cloud_out.fields[field_size].offset = offset;
     cloud_out.fields[field_size].count = 1;
     offset += 4;
@@ -119,7 +117,7 @@ void LaserProjection::projectLaser_(
     size_t field_size = cloud_out.fields.size();
     cloud_out.fields.resize(field_size + 1);
     cloud_out.fields[field_size].name = "index";
-    cloud_out.fields[field_size].datatype = POINT_FIELD::INT32;
+    cloud_out.fields[field_size].datatype = sensor_msgs::msg::PointField::INT32;
     cloud_out.fields[field_size].offset = offset;
     cloud_out.fields[field_size].count = 1;
     offset += 4;
@@ -130,7 +128,7 @@ void LaserProjection::projectLaser_(
     size_t field_size = cloud_out.fields.size();
     cloud_out.fields.resize(field_size + 1);
     cloud_out.fields[field_size].name = "distances";
-    cloud_out.fields[field_size].datatype = POINT_FIELD::FLOAT32;
+    cloud_out.fields[field_size].datatype = sensor_msgs::msg::PointField::FLOAT32;
     cloud_out.fields[field_size].offset = offset;
     cloud_out.fields[field_size].count = 1;
     offset += 4;
@@ -141,7 +139,7 @@ void LaserProjection::projectLaser_(
     size_t field_size = cloud_out.fields.size();
     cloud_out.fields.resize(field_size + 1);
     cloud_out.fields[field_size].name = "stamps";
-    cloud_out.fields[field_size].datatype = POINT_FIELD::FLOAT32;
+    cloud_out.fields[field_size].datatype = sensor_msgs::msg::PointField::FLOAT32;
     cloud_out.fields[field_size].offset = offset;
     cloud_out.fields[field_size].count = 1;
     offset += 4;
@@ -153,19 +151,19 @@ void LaserProjection::projectLaser_(
     cloud_out.fields.resize(field_size + 3);
 
     cloud_out.fields[field_size].name = "vp_x";
-    cloud_out.fields[field_size].datatype = POINT_FIELD::FLOAT32;
+    cloud_out.fields[field_size].datatype = sensor_msgs::msg::PointField::FLOAT32;
     cloud_out.fields[field_size].offset = offset;
     cloud_out.fields[field_size].count = 1;
     offset += 4;
 
     cloud_out.fields[field_size + 1].name = "vp_y";
-    cloud_out.fields[field_size + 1].datatype = POINT_FIELD::FLOAT32;
+    cloud_out.fields[field_size + 1].datatype = sensor_msgs::msg::PointField::FLOAT32;
     cloud_out.fields[field_size + 1].offset = offset;
     cloud_out.fields[field_size + 1].count = 1;
     offset += 4;
 
     cloud_out.fields[field_size + 2].name = "vp_z";
-    cloud_out.fields[field_size + 2].datatype = POINT_FIELD::FLOAT32;
+    cloud_out.fields[field_size + 2].datatype = sensor_msgs::msg::PointField::FLOAT32;
     cloud_out.fields[field_size + 2].offset = offset;
     cloud_out.fields[field_size + 2].count = 1;
     offset += 4;
@@ -330,7 +328,7 @@ void LaserProjection::transformLaserScanToPointCloud_(
     memcpy(&pt_index, &cloud_out.data[i * cloud_out.point_step + index_offset], sizeof(uint32_t));
 
     // Assume constant motion during the laser-scan and use slerp to compute intermediate transforms
-    tfScalar ratio = pt_index * ranges_norm;
+    double ratio = pt_index * ranges_norm;
 
     // TODO(anon): Make a function that performs both the slerp and linear interpolation needed to
     // interpolate a Full Transform (Quaternion + Vector)

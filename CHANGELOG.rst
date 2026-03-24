@@ -2,11 +2,60 @@
 Changelog for package laser_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.4.1 (2025-10-07)
+2.11.3 (2026-03-24)
+-------------------
+* Use new ROSIDL aggregate CMake target (`#115 <https://github.com/ros-perception/laser_geometry/issues/115>`_)
+* Contributors: Emerson Knapp
+
+2.11.2 (2025-10-03)
+-------------------
+* Use seconds in sensor_msgs::msg::LaserScan msg inside the test (`#107 <https://github.com/ros-perception/laser_geometry/issues/107>`_)
+* Use constructor of rclcpp::Time instead of conversion. (`#91 <https://github.com/ros-perception/laser_geometry/issues/91>`_)
+* fix cmake deprecation (`#105 <https://github.com/ros-perception/laser_geometry/issues/105>`_)
+* Contributors: AiVerisimilitude, Alejandro Hernández Cordero, mosfet80
+
+2.11.1 (2025-06-23)
+-------------------
+* Remove hard-coded eigen3 header path for linux hosts (`#95 <https://github.com/ros-perception/laser_geometry/issues/95>`_)
+  Co-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>
+* Contributors: Lukas Schäper
+
+2.11.0 (2025-04-28)
+-------------------
+
+2.10.0 (2024-12-20)
+-------------------
+* Deprecating tf2 C Headers (`#98 <https://github.com/ros-perception/laser_geometry/issues/98>`_)
+* Remove CODEOWNERS and mirror-rolling-to-main workflow (`#100 <https://github.com/ros-perception/laser_geometry/issues/100>`_)
+* Contributors: Alejandro Hernández Cordero, Lucas Wendland
+
+2.9.0 (2024-11-20)
 ------------------
-* Use constructor of rclcpp::Time instead of conversion operator (backport `#91 <https://github.com/ros-perception/laser_geometry/issues/91>`_) (`#114 <https://github.com/ros-perception/laser_geometry/issues/114>`_)
-* Use seconds in sensor_msgs::msg::LaserScan msg inside the test (`#107 <https://github.com/ros-perception/laser_geometry/issues/107>`_) (`#111 <https://github.com/ros-perception/laser_geometry/issues/111>`_)
-* Contributors: mergify[bot]
+* Stop using python_cmake_module. (`#93 <https://github.com/ros-perception/laser_geometry/issues/93>`_)
+* Contributors: Chris Lalancette
+
+2.8.1 (2024-10-03)
+------------------
+* Added common linters (`#96 <https://github.com/ros-perception/laser_geometry/issues/96>`_)
+* Contributors: Alejandro Hernández Cordero
+
+2.8.0 (2024-04-26)
+------------------
+
+2.7.0 (2023-12-26)
+------------------
+* Switch to target_link_libraries. (`#92 <https://github.com/ros-perception/laser_geometry/issues/92>`_)
+* Contributors: Chris Lalancette
+
+2.6.0 (2023-04-28)
+------------------
+
+2.5.0 (2023-02-14)
+------------------
+* Update laser_geometry to C++17. (`#90 <https://github.com/ros-perception/laser_geometry/issues/90>`_)
+* Update Maintainers (`#88 <https://github.com/ros-perception/laser_geometry/issues/88>`_)
+* Mirror rolling to ros2
+* Contributors: Audrow Nash, Chris Lalancette
 
 2.4.0 (2022-03-01)
 ------------------
