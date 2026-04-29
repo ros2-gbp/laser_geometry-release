@@ -1,0 +1,13 @@
+Source: ros-lyrical-laser-geometry
+Section: misc
+Priority: optional
+Maintainer: Dharini Dutia <dharini@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-gtest <!nocheck>, ros-lyrical-ament-cmake-pytest <!nocheck>, ros-lyrical-ament-cmake-python, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ament-lint-common <!nocheck>, ros-lyrical-eigen3-cmake-module, ros-lyrical-rclcpp, ros-lyrical-sensor-msgs, ros-lyrical-tf2, ros-lyrical-ros-workspace
+Homepage: http://github.com/ros-perception/laser_geometry
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-laser-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, python3-numpy, ros-lyrical-eigen3-cmake-module, ros-lyrical-rclcpp, ros-lyrical-rclpy, ros-lyrical-sensor-msgs, ros-lyrical-sensor-msgs-py, ros-lyrical-tf2, ros-lyrical-ros-workspace
+Description: This package contains a class for converting from a 2D laser scan as defined by sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud or sensor_msgs/PointCloud2.
+ In particular, it contains functionality to account for the skew resulting from moving robots or tilting laser scanners.
